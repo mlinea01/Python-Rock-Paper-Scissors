@@ -18,6 +18,12 @@ while leaveGame != "q":
     choice = int(input())
     computerChoice = random.randint(1,3)
 
+    #If the user enters a number greater than 3, it will prompt the user to enter a number
+    #lower than 3 and restart the loop.
+    if choice > 3:
+        print("Choose a number from 1-3")
+        continue
+
     #If the users choice matches the computers choice it won't affect the score
     #and will alert the user that the match was a tie.
     #At the end of this if block, it will ask the user if he/she would like to play again.
